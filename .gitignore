@@ -1,0 +1,49 @@
+# Compilado de archivos Java
+*.class
+
+# Archivos de paquetes
+*.jar
+*.war
+*.ear
+
+# Archivos de configuración de la IDE
+/.idea
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# Archivos de construcción de Maven
+/target/
+/pom.xml.tag
+/pom.xml.releaseBackup
+/pom.xml.versionsBackup
+/pom.xml.next
+/release.properties
+/dependency-reduced-pom.xml
+/buildNumber.properties
+/.mvn/timing.properties
+
+# Archivos de construcción de Gradle
+/.gradle/
+/build/
+
+# Archivos temporales
+*~
+*.swp
+*.swo
+*.bak
+*.ser
+*.tmp
+*.log
+*.scc
+
+# Archivos de Selenium
+*.json
+*.lock
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
