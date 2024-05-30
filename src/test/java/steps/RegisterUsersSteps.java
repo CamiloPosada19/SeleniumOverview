@@ -1,27 +1,30 @@
 package steps;
 import io.cucumber.java.en.*;
-import io.cucumber.java.PendingException;
-public class RegisterUsersSteps {
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import pages.LoginPage;
+import pages.RegisterPage;
 
-    @Given("^I as a user enter the website$")
-    public void i_as_a_user_enter_the_website() {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.print("Conectando...");
+public class RegisterUsersSteps {
+    private WebDriver driver;
+    LoginPage loginPage = new LoginPage();
+    RegisterPage registerPage = new RegisterPage();
+
+    @When("I fill in the data for the creation of the account")
+    public void i_fill_in_the_data_for_the_creation_of_the_account() {
+        registerPage.fillTheForm();
     }
-    @When("^I click on singup\\/login, I enter the data to create an account.$")
-    public void i_click_on_singup_login_i_enter_the_data_to_create_an_account() {
-        System.out.print("Conectando...");
-    }
-    @Then("^I check the Account Created tooltip$")
-    public void i_check_the_account_created_tooltip() {
-        System.out.print("Conectando...");
+    
+    @Then("I check the {string}")
+    public void iCheckThe(String expectedResult) {
+        System.out.println(registerPage.getTextAccount());
+        Assert.assertEquals(registerPage.getTextAccount(),expectedResult);
     }
     @Then("^I delete the account with the button$")
     public void i_delete_the_account_with_the_button() {
-        System.out.print("Conectando...");
+        registerPage.ClickInContinue();
+        registerPage.DeleteAccount();
     }
-    @Then("^I check the Account Deleted tooltip$")
-    public void i_check_the_account_deleted_tooltip() {
-        System.out.print("Conectando...");
-    }
+
+  
 }
