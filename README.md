@@ -28,3 +28,4 @@ After running the tests, you can see the report in the following file:
 ```bash
 target/cucumber_reports.html
 ```
+![App Screenshot](https://github.com/CamiloPosada19/SeleniumOverview/blob/main/Feature.png)
